@@ -1,0 +1,39 @@
+<div style="background: #fff;">
+    <header>
+      <div class="container">
+          <h1>Aplicativo para sorteio!</h1>
+          <h2>Eventick </h2>
+      </div>
+    </header>
+    <div class="container">
+    <%= link_to 'Sair', '', class: 'btn btn-embossed btn-primary pull-right', ng_click: 'logout()' %>
+        <div class="content-header">
+            <%= link_to 'Sortear', '#',  class: 'btn btn-embossed btn-primary', ng_click: 'raffle()' %>
+            <%= link_to 'Atualizar lista', '/',  class: 'btn btn-embossed btn-primary', ng_click: 'syncEventick()' %>
+            <h2><span> {{ attendees.length }} PARTICIPANTES</span> </h2>
+        </div>
+        <table id="participantes" class="table table-striped">
+            <caption>Participantes</caption>
+            <thead>
+                <tr>
+                  <th data-sort="string">Nome</th>
+                  <th data-sort="string">E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="a in attendees">
+                <td><a ng-click='checkAttendee(a)'>{{a.name}} </a></td>
+                <td>{{a.email}}</td>
+              </li>
+            </tbody>
+       </table>
+    <!-- /.container -->
+</div>
+
+<a href="#_" class="lightbox" id="img1" ng-show='lightboxSuccess'>
+  <div class="alertmsg">
+    <img gravatar-src="attendee_email" gravatar-size="100">
+    <h4>Iuhul, {{attendee_name}}!</h4>
+    <p>Você ganhou!!!</p>
+  </div>
+</a>
