@@ -1,7 +1,7 @@
 (function () {
    'use strict';
 
-  SelfCheckin.Services.
+  Roskilde.Services.
     factory('eventick',['$http', '$localStorage', function($http, $localStorage) {
     var storage = $localStorage;
 

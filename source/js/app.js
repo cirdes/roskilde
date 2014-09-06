@@ -1,6 +1,6 @@
-angular.module('selfCheckin', ['selfCheckin.controllers', 'selfCheckin.services']);
+angular.module('roskilde', ['Roskilde.controllers', 'Roskilde.services']);
 
-angular.module('selfCheckin').config(function($routeProvider, $locationProvider) {
+angular.module('roskilde').config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
   $routeProvider
@@ -12,7 +12,7 @@ angular.module('selfCheckin').config(function($routeProvider, $locationProvider)
 });
 });
 
-var SelfCheckin = SelfCheckin || {};
+var Roskilde = Roskilde || {};
 
-SelfCheckin.Controllers = angular.module('selfCheckin.controllers', ['ngRoute', 'ui.gravatar', 'ngStorage']);
-SelfCheckin.Services = angular.module('selfCheckin.services', []);
+Roskilde.Controllers = angular.module('Roskilde.controllers', ['ngRoute', 'ui.gravatar', 'ngStorage']);
+Roskilde.Services = angular.module('Roskilde.services', []);

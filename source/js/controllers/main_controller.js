@@ -1,7 +1,7 @@
 (function () {
    'use strict';
 
-  SelfCheckin.Controllers.
+  Roskilde.Controllers.
     controller('MainCtrl',['$scope', '$location', '$localStorage','eventick', '$timeout', function($scope, $location, $localStorage, eventick, $timeout) {
 
     $scope.$storage = $localStorage;
